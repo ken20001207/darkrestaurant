@@ -1,0 +1,23 @@
+{
+  "name": "git-darkrestaurant",
+  "version": "1.0.0",
+  "description": "该专案为浙大勤创黑暗餐厅的活动报名表，使用 node js 搭建。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ken20001207/darkrestaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ken20001207/darkrestaurant/issues"
+  },
+  "homepage": "https://github.com/ken20001207/darkrestaurant#readme",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}

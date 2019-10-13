@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-
     <!-- 引入 Jquery -->
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 
@@ -13,30 +11,86 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap" rel="stylesheet">
 
     <!-- 引入 CSS 样式设置文件 -->
-    <link rel="stylesheet" type="text/css" href="cssfolder/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 </head>
 
 <body>
 
-    <div class="row" id="login">
-        <div class="center container">
-            <div class="row" style="text-align: center">
-                <h1>活动Logo放这里</h1>
-            </div>
-        </div>
-    </div>
+    <div class="container">
 
-    <!-- 网页底部说明文字 -->
-    <div class="row" style="text-align: center">
-        <p style="color:white">Copyright © 2019 PAPIC. All Rights Reserved.</p>
+        <div class="title">
+            <h3 class="gold">黑暗餐厅：失落神庙</h3>
+            <h1 class="gold">活動報名表</h1>
+            <p>这里是一些关于活动的资讯以及文案，但是我现在手上没有，只能一直复制这行文字。
+                这里是一些关于活动的资讯以及文案，但是我现在手上没有，只能一直复制这行文字。
+                这里是一些关于活动的资讯以及文案，但是我现在手上没有，只能一直复制这行文字。
+                这里是一些关于活动的资讯以及文案，但是我现在手上没有，只能一直复制这行文字。
+                这里是一些关于活动的资讯以及文案，但是我现在手上没有，只能一直复制这行文字。</p>
+        </div>
+
+        <form id="form" method="POST">
+
+
+            <div class="section" style="display: inline-block;">
+                <h3 class="gold">姓名 Name</h3>
+                <p>这里是一些关于该问题的补充描述。</p>
+                <input type="text" id="name" name="name">
+            </div>
+
+            <div class="section" style="display: inline-block;">
+                <h3 class="gold">學號 School Number</h3>
+                <p>这里是一些关于该问题的补充描述。</p>
+                <input type="text" id="schoolnumber" name="schoolnumber">
+            </div>
+
+
+            <div class="section" style="display: inline-block;">
+                <h3 class="gold">性別 Gender</h3>
+                <p>这里是一些关于该问题的补充描述。</p>
+                <select name="gender" id="gender">
+                    <option value="小哥哥">小哥哥</option>
+                    <option value="小姐姐">小姐姐</option>
+                  </select>
+            </div>
+
+            <div class="section" style="display: inline-block;">
+                <h3 class="gold">聯絡資訊 Contact</h3>
+                <p>这里是一些关于该问题的补充描述。</p>
+                <input type="text" id="contact" name="contact">
+            </div>
+
+            <div class="section" style="display: inline-block;">
+                <h3 class="gold">是否有食物過敏 Food Allergens</h3>
+                <p>这里是一些关于该问题的补充描述。</p>
+                <input type="text" id="allergens" name="allergens">
+            </div>
+
+            <div class="section" style="display: inline-block;">
+                <h3 class="gold">你愿意用你的味蕾和智慧打败对手吗?</h3>
+                <p>这里是一些关于该问题的补充描述。</p>
+                <p style="display: inline-block; vertical-align:text-bottom;margin-bottom: 8px; margin-right: 15px;">愿意
+                </P>
+                <label style="display: inline-block; vertical-align:text-bottom;" class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+                <p style="display: inline-block;  vertical-align:text-bottom; margin-bottom: 8px;  margin-left: 15px;">
+                    我愿意</p>
+            </div class="section" style="display: inline-block;">
+            <button type="submit">提交报名</button>
+            <div>
+
+            </div>
+
+        </form>
     </div>
 
     <!-- 主要 JS & Jquery 程序 -->
     <script type="text/javascript" src="js/main.js"></script>
 
 </body>
+
 
 </html>

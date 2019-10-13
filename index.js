@@ -1,7 +1,7 @@
-import { createConnection } from 'mysql';
+var mysql = require('mysql');
 
 // 连接共享型MySQL
-var connection = createConnection({
+var connection = mysql.createConnection({
     host: 'w.rdc.sae.sina.com.cn',
     port: 3306,
     user: '5z0k2xll4n',
@@ -9,27 +9,16 @@ var connection = createConnection({
     database: 'app_papic'
 });
 
-console.log('[INFO] 尝试连线至数据库中 ...');
-connection.query('show status', function (err) {
-    if (err) {
-        console.log('[ERROR] 数据库连线失败，请检查配置');
-        console.log('[ERROR] 错误内容：' + err.message);
-    } else {
-        console.log('[INFO] 数据库连线成功。');
-    }
-});
-
 // 引入 express 套件
-import express, { static } from "express";
+var express = require('express');
 var app = express();
 
-import { json, urlencoded } from 'body-parser';
 app.set('view engine', 'ejs');
-app.use(json());
-app.use(urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 // 回传静态配置文件
-app.use(static('static'));
+app.use(express.static('static'));
 
 // 显示网站画面
 app.get("/", function (req, res) {
@@ -38,12 +27,21 @@ app.get("/", function (req, res) {
 
 // 报名
 app.post("/register", function (req, res) {
-    conn.query("INSERT INTO `darkres` (`name`,`schoolnumber`,`gender`,`allergens`,`contact`) VALUES ('" + req.body.name + "','" + req.body.schoolnumber + "', '" + req.body.gender + "', '" + req.body.allergens + "','" + req.body.contact + "');");
-    res.write("1");
-    res.end();
+    console.log('[INFO] 收到来自 ' + req.body.name + ' 同学的报名表，写入数据库中...');
+    connection.query("INSERT INTO `darkres` (`name`,`schoolnumber`,`gender`,`allergens`,`contact`) VALUES ('" + req.body.name + "','" + req.body.schoolnumber + "', '" + req.body.gender + "', '" + req.body.allergens + "','" + req.body.contact + "');", function (err) {
+        if (err) {
+            console.log('[ERROR] 写入数据库失败！');
+            console.log('[ERROR] 错误内容：' + err.message);
+            res.end();
+        } else {
+            console.log('[INFO] 写入数据库完成')
+            res.write("1");
+            res.end();
+        }
+    });
 });
 
 // 建立连线服务器
-var server = app.listen(5050, function () {
+app.listen(5050, function () {
     console.log("[INFO] 浙大勤创黑暗餐厅活动报名系统服现已开放连线");
 });

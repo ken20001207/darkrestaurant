@@ -22,33 +22,25 @@
 
         <div class="title">
             <h3 class="gold">黑暗餐厅：失落神庙</h3>
-            <h1 class="gold">活動報名表</h1>
-            <p>这里是一些关于活动的资讯以及文案，但是我现在手上没有，只能一直复制这行文字。
-                这里是一些关于活动的资讯以及文案，但是我现在手上没有，只能一直复制这行文字。
-                这里是一些关于活动的资讯以及文案，但是我现在手上没有，只能一直复制这行文字。
-                这里是一些关于活动的资讯以及文案，但是我现在手上没有，只能一直复制这行文字。
-                这里是一些关于活动的资讯以及文案，但是我现在手上没有，只能一直复制这行文字。</p>
+            <h1 class="gold">活动报名表</h1>
         </div>
 
         <form id="form" method="POST">
 
 
             <div class="section" style="display: inline-block;">
-                <h3 class="gold">姓名 Name</h3>
-                <p>这里是一些关于该问题的补充描述。</p>
+                <h3 class="gold">姓名</h3>
                 <input type="text" id="name" name="name">
             </div>
 
             <div class="section" style="display: inline-block;">
-                <h3 class="gold">學號 School Number</h3>
-                <p>这里是一些关于该问题的补充描述。</p>
+                <h3 class="gold">学号</h3>
                 <input type="text" id="schoolnumber" name="schoolnumber">
             </div>
 
 
             <div class="section" style="display: inline-block;">
-                <h3 class="gold">性別 Gender</h3>
-                <p>这里是一些关于该问题的补充描述。</p>
+                <h3 class="gold">性別</h3>
                 <select name="gender" id="gender">
                     <option value="小哥哥">小哥哥</option>
                     <option value="小姐姐">小姐姐</option>
@@ -56,29 +48,93 @@
             </div>
 
             <div class="section" style="display: inline-block;">
-                <h3 class="gold">聯絡資訊 Contact</h3>
-                <p>这里是一些关于该问题的补充描述。</p>
+                <h3 class="gold">联络资讯</h3>
+                <p>请填写您的联络资讯，手机号码为佳</p>
                 <input type="text" id="contact" name="contact">
             </div>
 
             <div class="section" style="display: inline-block;">
-                <h3 class="gold">是否有食物過敏 Food Allergens</h3>
-                <p>这里是一些关于该问题的补充描述。</p>
-                <input type="text" id="allergens" name="allergens">
+                <h3 class="gold">是否对下列食物過敏</h3>
+                <p>请勾选您会过敏的食物</p>
+                <input type="hidden" name="allergens" id="allergens">
+                <table style="color: gray;">
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="allergens1" value="[牛奶]"> 牛奶
+                        </td>
+                        <td>
+                            <input type="checkbox" id="allergens2" value="[红茶]"> 红茶
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="allergens3" value="[小麦]"> 小麦
+                        </td>
+                        <td>
+                            <input type="checkbox" id="allergens4" value="[鸡蛋]"> 鸡蛋
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="allergens5" value="[巧克力]"> 巧克力
+                        </td>
+                        <td>
+                            <input type="checkbox" id="allergens6" value="[鸡肉]"> 鸡肉
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id="allergens7" onclick="showfruitaller()" value=""> 水果
+                        </td>
+                        <td>
+                            <input type="checkbox" id="allergens8" value="[咖啡]"> 咖啡
+                        </td>
+                    </tr>
+                </table>
+                <div id="fruitaller">
+                    <p>对什么水果过敏呢？</p>
+                    <input type="text" id="allergens9" name="allergens9" value="">
+                </div>
             </div>
 
             <div class="section" style="display: inline-block;">
-                <h3 class="gold">你愿意用你的味蕾和智慧打败对手吗?</h3>
-                <p>这里是一些关于该问题的补充描述。</p>
-                <p style="display: inline-block; vertical-align:text-bottom;margin-bottom: 8px; margin-right: 15px;">愿意
-                </P>
-                <label style="display: inline-block; vertical-align:text-bottom;" class="switch">
-                    <input type="checkbox">
+                <h3 class="gold">学园</h3>
+                <select name="xueyuan" id="xueyuan">
+                    <option value="云峰学园">云峰学园</option>
+                    <option value="蓝田学园">蓝田学园</option>
+                    <option value="丹青学园">丹青学园</option>
+                  </select>
+            </div>
+
+            <div class="section" style="display: inline-block;">
+                <h3 class="gold">你有可能无法按时参加活动吗</h3>
+                <div class="changecolor">
+                    <p style="display: inline-block; vertical-align:text-bottom;margin-bottom: 8px; margin-right: 15px;">准时抵达
+                    </P>
+                    <label style="display: inline-block; vertical-align:text-bottom;" class="switch">
+                    <input type="checkbox" id="ifdelay" onclick="showwilldelay()">
                     <span class="slider round"></span>
                 </label>
+                    <p style="display: inline-block;  vertical-align:text-bottom; margin-bottom: 8px;  margin-left: 15px;">
+                        可能迟到</p>
+                </div>
+                <div id="willdelay">
+                    <p>请你在此详细说明理由</p>
+                    <input type="text" id="delay" name="delay">
+                </div>
+            </div>
+
+            <div class="section" style="display: inline-block;">
+                <h3 class="gold">你愿意用你的味蕾和智慧打败对手吗</h3>
+                <p style="display: inline-block; vertical-align:text-bottom;margin-bottom: 8px; margin-right: 15px;">愿意
+                </p>
+                <label style="display: inline-block; vertical-align:text-bottom;" class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
                 <p style="display: inline-block;  vertical-align:text-bottom; margin-bottom: 8px;  margin-left: 15px;">
                     我愿意</p>
-            </div class="section" style="display: inline-block;">
+            </div>
             <button type="submit">提交报名</button>
             <div>
 

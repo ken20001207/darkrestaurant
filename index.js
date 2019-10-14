@@ -9,6 +9,16 @@ var connection = mysql.createConnection({
     database: 'app_papic'
 });
 
+/* for debug
+var connection = mysql.createConnection({
+    host: 'localhost',
+    port: 3306,
+    user: 'yuanlin',
+    password: 'Yuanlin1207!',
+    database: 'darkres'
+});
+*/
+
 // 引入 express 套件
 var express = require('express');
 var app = express();
@@ -21,14 +31,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static('static'));
 
 // 显示网站画面
-app.get("/", function (req, res) {
+app.get("/", function(req, res) {
     res.render("mainpage", { islogin: false });
 });
 
 // 报名
-app.post("/register", function (req, res) {
+app.post("/register", function(req, res) {
     console.log('[INFO] 收到来自 ' + req.body.name + ' 同学的报名表，写入数据库中...');
-    connection.query("INSERT INTO `darkres` (`name`,`schoolnumber`,`gender`,`allergens`,`contact`) VALUES ('" + req.body.name + "','" + req.body.schoolnumber + "', '" + req.body.gender + "', '" + req.body.allergens + "','" + req.body.contact + "');", function (err) {
+    connection.query("INSERT INTO `darkres` (`name`,`schoolnumber`,`gender`,`allergens`,`contact`,`xueyuan`,`delay`) VALUES ('" + req.body.name + "','" + req.body.schoolnumber + "', '" + req.body.gender + "', '" + req.body.allergens + "','" + req.body.contact + "','" + req.body.xueyuan + "','" + req.body.delay + "');", function(err) {
         if (err) {
             console.log('[ERROR] 写入数据库失败！');
             console.log('[ERROR] 错误内容：' + err.message);
@@ -42,6 +52,6 @@ app.post("/register", function (req, res) {
 });
 
 // 建立连线服务器
-app.listen(5050, function () {
+app.listen(5050, function() {
     console.log("[INFO] 浙大勤创黑暗餐厅活动报名系统服现已开放连线");
 });

@@ -1,11 +1,8 @@
-body {
-    background-color: #282828;
-}
-
 .gold {
     background: -webkit-linear-gradient(-90deg, #EEC681, #B99D5B);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 h2 {
@@ -22,11 +19,6 @@ h3 {
     margin-top: 200px;
 }
 
-.section {
-    margin-top: 75px;
-    vertical-align: top;
-}
-
 p {
     color: #8f8f8f;
 }
@@ -37,24 +29,30 @@ p {
         padding-right: 5%;
         padding-bottom: 100px;
     }
+    .qrcode {
+        width: 70%;
+    }
+    .section {
+        margin-top: 50px;
+        vertical-align: top;
+        width: 80%;
+    }
     input[type=text] {
         background-color: #282828;
         border: 2px solid rgba(185, 157, 91, 0.651);
-        width: 15em;
+        width: 100%;
         border-radius: 4px;
         height: 30px;
         color: white;
-        margin-right: 3em;
         margin-top: 15px;
         padding: 10px;
     }
     select {
         background-color: #282828;
         border: 2px solid rgba(185, 157, 91, 0.651);
-        width: 15em;
+        width: 100%;
         border-radius: 4px;
         height: 50px;
-        margin-right: 100px;
         margin-top: 15px;
         color: white;
         padding: 10px;
@@ -71,7 +69,7 @@ p {
         margin-right: 15em;
         color: rgb(61, 61, 61);
         font-weight: bolder;
-        margin-top: 80px;
+        margin-top: 20px;
     }
     h1 {
         font-size: 42px;
@@ -85,6 +83,9 @@ p {
         padding-right: 15%;
         padding-bottom: 200px;
     }
+    .show_on_small {
+        display: none;
+    }
     input[type=text] {
         background-color: #282828;
         border: 2px solid rgba(185, 157, 91, 0.651);
@@ -95,6 +96,9 @@ p {
         margin-top: 15px;
         color: white;
         padding: 10px;
+    }
+    .qrcode {
+        width: 300px;
     }
     select {
         background-color: #282828;
@@ -118,7 +122,7 @@ p {
         border-radius: 20px;
         height: 45px;
         margin-right: 500px;
-        margin-top: 80px;
+        margin-top: 20px;
     }
     h1 {
         font-size: 72px;
@@ -136,6 +140,14 @@ p {
 
 table {
     margin-top: 25px;
+}
+
+hr {
+    border-color: #8f8f8f;
+}
+
+.cpr {
+    font-size: 12px;
 }
 
 

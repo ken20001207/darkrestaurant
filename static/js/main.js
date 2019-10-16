@@ -1,10 +1,16 @@
 $(document).ready(function() {
 
+    // 设置背景
+    $.backstretch("../images/bg.png");
+
     // 一开始先隐藏水果过敏问题
     $('#fruitaller').fadeOut(1);
 
     // 一开始先隐藏迟到问题
     $('#willdelay').fadeOut(1);
+
+    // 一开始先隐藏黑白二维码
+    $('#ori_qrcode').fadeOut(1);
 
     $('#form').submit(function(e) {
 
@@ -70,4 +76,8 @@ function showwilldelay() {
     } else {
         $('#willdelay').fadeOut(200);
     }
+}
+
+function show_ori_qrcode() {
+    $('#ori_qrcode').fadeIn(200);
 }

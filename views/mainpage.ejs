@@ -27,6 +27,8 @@
 
         <form id="form" method="POST">
 
+            <h3 class="gold" style="margin-top: 100px">Step 1 / 填写报名信息</h3>
+            <hr>
 
             <div class="section" style="display: inline-block;">
                 <h3 class="gold">姓名</h3>
@@ -98,11 +100,12 @@
             </div>
 
             <div class="section" style="display: inline-block;">
-                <h3 class="gold">学园</h3>
+                <h3 class="gold">学园 / 学院</h3>
                 <select name="xueyuan" id="xueyuan">
                     <option value="云峰学园">云峰学园</option>
                     <option value="蓝田学园">蓝田学园</option>
                     <option value="丹青学园">丹青学园</option>
+                    <option value="竺可桢学院">竺可桢学院</option>
                   </select>
             </div>
 
@@ -135,6 +138,17 @@
                 <p style="display: inline-block;  vertical-align:text-bottom; margin-bottom: 8px;  margin-left: 15px;">
                     我愿意</p>
             </div>
+
+            <h3 class="gold" style="margin-top: 100px">Step 2 / 扫码加入活动微信群组</h3>
+            <hr>
+            <p>必须在群组内才有可能被选中参加活动哦！</p>
+            <img class="qrcode" src="images/qrcode_gold.png">
+            <p onclick="show_ori_qrcode()">扫不出来吗？点我看原版二维码</p>
+
+            <img class="qrcode" id="ori_qrcode" src="images/qrcode_black.png">
+
+            <h3 class="gold" style="margin-top: 100px">Step 3 / 提交报名</h3>
+            <hr>
             <button type="submit">提交报名</button>
             <div>
 
@@ -143,8 +157,17 @@
         </form>
     </div>
 
+    <div style="text-align: center">
+        <p class="cpr">浙大勤创 2019 黑暗餐厅活动报名系统 <br class="show_on_small"> © 2019 ZJU PAPIC. All Rights Reserved.</p>
+    </div>
+
+
     <!-- 主要 JS & Jquery 程序 -->
     <script type="text/javascript" src="js/main.js"></script>
+
+
+    <!-- Backstrtch Jquery 程序 -->
+    <script type="text/javascript" src="js/backstretch.js"></script>
 
 </body>
 

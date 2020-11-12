@@ -16,12 +16,16 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c97a27c9-727c-4c3d-a507-1ec7a103582f" name="Default Changelist" comment="Add some idea config files">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="c97a27c9-727c-4c3d-a507-1ec7a103582f" name="Default Changelist" comment="Add .gitignore and yarn.lock" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,10 +35,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="614b0d4a-8ded-47e6-ad84-dc8642b8b97b" />
+    <option name="defaultAccountId" value="30070435-dcb3-48a5-b909-595c0b2ff259" />
   </component>
   <component name="ProjectId" id="1kBBRW4qCO3TeNjyy2d0Vn3XkQE" />
   <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -42,12 +47,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="yarn install" />
+    </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -57,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605164096701</updated>
-      <workItem from="1605164097777" duration="116000" />
+      <workItem from="1605164097777" duration="217000" />
     </task>
     <task id="LOCAL-00001" summary="Remove node_modules and add it to gitignore">
       <created>1605164153784</created>
@@ -73,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605164184279</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add .gitignore and yarn.lock">
+      <created>1605164276546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605164276546</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,15 +103,63 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Remove node_modules and add it to gitignore" />
     <MESSAGE value="Add some idea config files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some idea config files" />
+    <MESSAGE value="Add .gitignore and yarn.lock" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add .gitignore and yarn.lock" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1126" height="260" key="GridCell.Tab.0.bottom" timestamp="1605164293177">
+      <screen x="0" y="25" width="1680" height="952" />
+    </state>
+    <state width="1126" height="260" key="GridCell.Tab.0.bottom/0.25.1680.952@0.25.1680.952" timestamp="1605164293177" />
+    <state width="1126" height="260" key="GridCell.Tab.0.center" timestamp="1605164293176">
+      <screen x="0" y="25" width="1680" height="952" />
+    </state>
+    <state width="1126" height="260" key="GridCell.Tab.0.center/0.25.1680.952@0.25.1680.952" timestamp="1605164293176" />
+    <state width="1126" height="260" key="GridCell.Tab.0.left" timestamp="1605164293175">
+      <screen x="0" y="25" width="1680" height="952" />
+    </state>
+    <state width="1126" height="260" key="GridCell.Tab.0.left/0.25.1680.952@0.25.1680.952" timestamp="1605164293175" />
+    <state width="1126" height="260" key="GridCell.Tab.0.right" timestamp="1605164293177">
+      <screen x="0" y="25" width="1680" height="952" />
+    </state>
+    <state width="1126" height="260" key="GridCell.Tab.0.right/0.25.1680.952@0.25.1680.952" timestamp="1605164293177" />
+    <state x="349" y="137" key="SettingsEditor" timestamp="1605164315905">
+      <screen x="0" y="25" width="1680" height="952" />
+    </state>
+    <state x="349" y="137" key="SettingsEditor/0.25.1680.952@0.25.1680.952" timestamp="1605164315905" />
+    <state x="440" y="238" key="Vcs.Push.Dialog.v2" timestamp="1605164299555">
+      <screen x="0" y="25" width="1680" height="952" />
+    </state>
+    <state x="440" y="238" key="Vcs.Push.Dialog.v2/0.25.1680.952@0.25.1680.952" timestamp="1605164299555" />
+    <state x="641" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605164288968">
+      <screen x="0" y="25" width="1680" height="952" />
+    </state>
+    <state x="641" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1680.952@0.25.1680.952" timestamp="1605164288968" />
+    <state x="505" y="229" width="670" height="675" key="run.anything.popup" timestamp="1605164221906">
+      <screen x="0" y="25" width="1680" height="952" />
+    </state>
+    <state x="505" y="229" width="670" height="675" key="run.anything.popup/0.25.1680.952@0.25.1680.952" timestamp="1605164221906" />
   </component>
 </project>
